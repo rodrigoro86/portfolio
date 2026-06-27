@@ -1,12 +1,17 @@
-FROM nginx:alpine
+FROM node:20-alpine AS build
 
 ARG VERSION=dev
+WORKDIR /app
 
-COPY Portfolio.html /usr/share/nginx/html/index.html
-COPY uploads/ /usr/share/nginx/html/uploads/
+COPY package*.json ./
+RUN npm ci
 
-RUN sed -i "s/__VERSION__/v${VERSION}/g" /usr/share/nginx/html/index.html
+COPY . .
 
+ENV VITE_VERSION=$VERSION
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]
