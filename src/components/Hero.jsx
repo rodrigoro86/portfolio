@@ -3,7 +3,7 @@ export default function Hero() {
     <section id="hero">
       <div className="hero-bg-text">RB</div>
       <div className="hero-content">
-        <div className="hero-tag">Olá, Mundo!</div>
+        <div className="hero-tag">Olá, Mundo!!!</div>
         <h1 className="hero-name">Sou <em>Rodrigo</em><br />Broslavschi</h1>
         <p className="hero-role">Desenvolvedor Sênior · Engenheiro de IA &amp; MLOps</p>
         <div className="hero-btns">
