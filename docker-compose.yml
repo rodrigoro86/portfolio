@@ -4,7 +4,7 @@ services:
 ## --------------------------- PORTFOLIO SITE --------------------------- ##
   portfolio_site:
     build: .
-    image: rodrigobroslavschi/portfolio-site:latest
+    image: portifolio
     networks:
       - portainerNet ## Nome da rede interna
     deploy:
@@ -15,19 +15,20 @@ services:
           - node.role == manager
       labels:
         - traefik.enable=true
-        # Router HTTPS (certificado Let's Encrypt)
-        - traefik.http.routers.portfolio_site.rule=Host(`www.rodrigobroslavschi.com.br`) || Host(`www.rodrigobroslavschi.com`)
+        - traefik.docker.network=portainerNet
+        # Router HTTPS (certificado Let's Encrypt) - apenas domínios .com.br
+        - traefik.http.routers.portfolio_site.rule=Host(`www.rodrigobroslavschi.com.br`) || Host(`rodrigobroslavschi.com.br`)
         - traefik.http.routers.portfolio_site.entrypoints=websecure
         - traefik.http.routers.portfolio_site.tls=true
         - traefik.http.routers.portfolio_site.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.portfolio_site.service=portfolio_site
         # Router HTTP para redirecionar para HTTPS
-        - traefik.http.routers.portfolio_site_http.rule=Host(`www.rodrigobroslavschi.com.br`) || Host(`www.rodrigobroslavschi.com`)
+        - traefik.http.routers.portfolio_site_http.rule=Host(`www.rodrigobroslavschi.com.br`) || Host(`rodrigobroslavschi.com.br`)
         - traefik.http.routers.portfolio_site_http.entrypoints=web
         - traefik.http.routers.portfolio_site_http.middlewares=redirect-to-https
         - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
         - traefik.http.services.portfolio_site.loadbalancer.server.port=80
         - traefik.http.services.portfolio_site.loadbalancer.passHostHeader=true
-        - traefik.http.routers.portfolio_site.service=portfolio_site
 ## --------------------------- PORTFOLIO SITE --------------------------- ##
 
 networks:

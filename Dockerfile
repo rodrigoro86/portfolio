@@ -1,10 +1,7 @@
 FROM nginx:alpine
 
-# Copy static site files to nginx default directory
-COPY . /usr/share/nginx/html
-
-# Use Portfolio.html as default entry page
-RUN cp /usr/share/nginx/html/Portfolio.html /usr/share/nginx/html/index.html
+COPY Portfolio.html /usr/share/nginx/html/index.html
+COPY uploads/ /usr/share/nginx/html/uploads/
 
 EXPOSE 80
 

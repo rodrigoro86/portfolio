@@ -1,0 +1,8 @@
+.git
+.github
+.gitignore
+*.md
+scraps/
+design-canvas.jsx
+.design-canvas.state.json
+Logo\ Options.html
