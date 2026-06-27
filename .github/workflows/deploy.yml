@@ -23,5 +23,6 @@ jobs:
             set -e
             cd ${{ secrets.DEPLOY_PATH }}
             git pull origin main
-            docker build -t portifolio .
+            VERSION=$(git rev-parse --short HEAD)
+            docker build --build-arg VERSION=$VERSION -t portifolio .
             docker stack deploy -c docker-compose.yml ${{ secrets.STACK_NAME }}
