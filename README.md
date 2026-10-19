@@ -13,9 +13,9 @@ Site de portfólio pessoal construído com React + Vite, servido via nginx em Do
 
 ```
 ├── src/
-│   ├── App.jsx               # Componente raiz + scroll reveal
+│   ├── App.jsx               # Componente raiz + animação ao rolar
 │   ├── index.css             # Estilos globais
-│   ├── main.jsx              # Entry point React
+│   ├── main.jsx              # Ponto de entrada React
 │   └── components/
 │       ├── Nav.jsx           # Navegação + menu mobile
 │       ├── Hero.jsx          # Seção inicial

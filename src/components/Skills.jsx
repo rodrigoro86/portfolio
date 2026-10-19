@@ -4,7 +4,7 @@ const SKILLS = [
     icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" className="skill-icon" alt="" />,
   },
   {
-    name: 'Machine Learning', pct: 90,
+    name: 'Aprendizado de Máquina', pct: 90,
     icon: (
       <svg className="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
@@ -30,7 +30,7 @@ const SKILLS = [
     icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" className="skill-icon" alt="" />,
   },
   {
-    name: 'Geospatial · GeoPandas · PostGIS', pct: 80,
+    name: 'Geoespacial · GeoPandas · PostGIS', pct: 80,
     icon: (
       <svg className="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <circle cx="12" cy="12" r="10"/>
@@ -40,7 +40,7 @@ const SKILLS = [
   },
 ]
 
-const TAGS = ['Git', 'DVC', 'MLflow', 'Docker', 'Linux', 'FastAPI', 'Cloud', 'CI/CD', 'GitHub Actions', 'Scikit-learn', 'Pandas', 'GeoPandas', 'PostGIS', 'Rasterio']
+const TAGS = ['Git', 'DVC', 'MLflow', 'Docker', 'Linux', 'FastAPI', 'Nuvem', 'CI/CD', 'GitHub Actions', 'Scikit-learn', 'Pandas', 'GeoPandas', 'PostGIS', 'Rasterio']
 
 export default function Skills() {
   return (

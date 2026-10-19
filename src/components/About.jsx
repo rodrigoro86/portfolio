@@ -11,10 +11,10 @@ export default function About() {
             <div className="section-label reveal">Sobre Mim</div>
             <h2 className="section-title reveal reveal-delay-1" style={{ marginBottom: '28px', fontSize: 'clamp(32px,4vw,48px)' }}>
               Desenvolvedor &amp;<br />
-              <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>AI Engineer</em>
+              <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>Engenheiro de IA</em>
             </h2>
             <p className="reveal reveal-delay-2">
-              Desenvolvedor com sólida experiência em projetos de Inteligência Artificial utilizando Python, com foco em práticas de MLOps. Especializado na automação de pipelines de machine learning, versionamento de dados e modelos com DVC e MLflow, e integração contínua com CI/CD.
+              Desenvolvedor com sólida experiência em projetos de Inteligência Artificial utilizando Python, com foco em práticas de MLOps. Especializado na automação de pipelines de aprendizado de máquina, versionamento de dados e modelos com DVC e MLflow, e integração contínua com CI/CD.
             </p>
             <p className="reveal reveal-delay-3">
               Proficiente em bibliotecas como Pandas, GeoPandas, Scikit-learn e FastAPI, aplicadas ao tratamento de dados geoespaciais e à construção de APIs para entrega de modelos em produção.

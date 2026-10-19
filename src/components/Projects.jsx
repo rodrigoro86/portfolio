@@ -13,7 +13,7 @@ const PROJECTS = [
   },
   {
     num: '03',
-    title: 'Air Traffic Control Tools',
+    title: 'Ferramentas de Controle de Tráfego Aéreo',
     desc: 'Desenvolvimento de ferramentas e softwares robustos em Python para manutenção de sistemas críticos de controle de tráfego aéreo. Análise de dados geográficos para calibração e otimização de rotas aéreas.',
     tags: ['Python', 'GeoPandas', 'PostGIS', 'Rasterio'],
   },

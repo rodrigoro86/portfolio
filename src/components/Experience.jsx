@@ -1,6 +1,6 @@
 const EXPERIENCE = [
   {
-    period: '2024 — Present',
+    period: '2024 — Atual',
     company: 'SIPREMO',
     role: 'Desenvolvedor Sênior',
     items: [
